@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   bigRed: {
     color: 'red',
     fontWeight: 'bold',
-    fontSize: 40,
+    fontSize: 30,
   },
   midRed: {
     color: 'red',

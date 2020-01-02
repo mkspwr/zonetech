@@ -21,13 +21,13 @@ export class YellowPage extends React.Component {
     this.state = { isLoading: true }
   }
   componentDidMount() {
-    return fetch('https://facebook.github.io/react-native/movies.json')
+    return fetch('http://dummy.restapiexample.com/api/v1/employees')
       .then((response) => response.json())
       .then((responseJson) => {
 
         this.setState({
           isLoading: false,
-          dataSource: responseJson.movies,
+          dataSource: responseJson,
         }, function () {
 
         });
@@ -50,7 +50,7 @@ export class YellowPage extends React.Component {
         <Text style={styles.bigBlue}>Yellow Zone</Text>
         <FlatList
           data={this.state.dataSource}
-          renderItem={({ item }) => <ScalableText style={styles.text}>{item.title}, {item.releaseYear}</ScalableText>}
+          renderItem={({ item }) => <ScalableText style={styles.text}>{item.id}, {item.employee_name}, {item.employee_salary}, {item.employee_age}</ScalableText>}
           keyExtractor={({ id }, index) => id}
         />
 
@@ -78,6 +78,6 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'tomato',
-    fontSize: 28
+    fontSize: 10
   }
 })
