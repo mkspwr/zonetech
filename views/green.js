@@ -20,7 +20,7 @@ export class GreenPage extends React.Component {
                 <Text style={styles.bigBlue}>Green Zone</Text>
                 <Image style={StyleSheet.heroImage}
                     source={require('./img/ShreyaBaby.jpg')} />
-
+            
                 <Button
                     title="Go back"
                     onPress={() => this.props.navigation.goBack()}
