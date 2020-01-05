@@ -21,7 +21,7 @@ export class YellowPage extends React.Component {
     this.state = { isLoading: true }
   }
   componentDidMount() {
-    return fetch('http://dummy.restapiexample.com/api/v1/employees')
+    return fetch('https:/zonetech.azurewebsites.net/todo/')
       .then((response) => response.json())
       .then((responseJson) => {
 
@@ -50,7 +50,7 @@ export class YellowPage extends React.Component {
         <Text style={styles.bigBlue}>Yellow Zone</Text>
         <FlatList
           data={this.state.dataSource}
-          renderItem={({ item }) => <ScalableText style={styles.text}>{item.id}, {item.employee_name}, {item.employee_salary}, {item.employee_age}</ScalableText>}
+          renderItem={({ item }) => <ScalableText style={styles.text}>{item.id}, {item.title}, {item.dueDate},{item.description}, {item.completed}</ScalableText>}
           keyExtractor={({ id }, index) => id}
         />
 

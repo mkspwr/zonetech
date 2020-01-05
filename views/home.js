@@ -22,7 +22,7 @@ export class Home extends React.Component {
           <TouchableOpacity style={styles.buttonGreen} onPress={() => this.props.navigation.navigate('GreenRT')}>
             <Text style={styles.buttonText}>I am good to go</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.buttonBlue} onPress={() => this.props.navigation.navigate('GreenRT')}>
+          <TouchableOpacity style={styles.buttonBlue} onPress={() => this.props.navigation.navigate('blueRT')}>
             <Text style={styles.buttonText}>I am running low</Text>
           </TouchableOpacity>
 
