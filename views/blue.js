@@ -47,7 +47,7 @@ export class BluePage extends React.Component {
         return (
             <View style={styles.MainContainer}>
                 <TextInput
-                    placeholder="Enter todo title"
+                    placeholder="Enter todo title - manoj"
                     style={styles.TextInputStyleClass}
                     underlineColorAndroid="transparent"
                     onChangeText={(TextInputText) => this.setState({ todo_title: TextInputText })} />
